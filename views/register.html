@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheet/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <title>Registro</title>
+  </head>
+  <body class="registro">
+    <header>
+      <section class="logo-buscar-copy">
+        <a href="#"
+          ><img src="/images/logo-mercado-liebre.svg" alt="logo" class="logo"
+        /></a>
+        <div>
+          <form action="/producto" method="GET">
+            <input
+              type="text"
+              placeholder="Buscar producto, marcas y algo mas"
+              class="buscar"
+            /><button><i class="fas fa-search"></i></button>
+          </form>
+        </div>
+        <p class="copy">
+          <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta
+          de crédito
+        </p>
+      </section>
+
+      <div class="cont-burguer"><i class="fas fa-bars burger"></i></div>
+      <section class="nav">
+        <ul class="ofertas-tiendas">
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <ul class="cuenta-login">
+          <li>
+            <a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i>
+          </li>
+          <li><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+          <li>
+            <a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <main class="registro-main">
+      <form action="/" method="GET" class="form" enctype="multipart/form-data">
+        <div>
+          <label for="nombre-apellido" class="label">Nombre y apellido</label>
+          <input
+            type="text"
+            id="nombre-apellido"
+            required
+            name="nombre-apellido"
+          />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="usuario" class="label">Nombre de Usuario</label>
+          <input type="text" id="usuario" required name="usuario" />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="fecha-de-nacimiento" class="label">Fecha de nacimiento</label>
+          <input
+            type="date"
+            id="fecha-de-nacimiento"
+            required
+            name="fecha-de-nacimiento"
+          />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="domicilio" class="label">Domicilio</label>
+          <input type="tex" id="domicilio" required name="domicilio" />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="" class="label">Perfil del usuario</label>
+          <div class="perfil">
+            <input
+              type="radio"
+              id="comprar"
+              required
+              name="perfil"
+              value="comprar"
+            />
+            <label for="comprar">Comprador</label>
+            <input
+              type="radio"
+              id="vender"
+              required
+              name="perfil"
+              value="vender"
+              placeholder="vender"
+            />
+            <label for="vender">Vendedor</label>
+          </div>
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="" class="label">Intereses</label>
+          <div class="interes">
+            <div>
+              <input
+                type="checkbox"
+                name="interes"
+                id="electro"
+                value="electro"
+              />
+              <label for="electro">Electro</label>
+            </div>
+            <div>
+              <input type="checkbox" name="interes" id="moda" value="moda" />
+              <label for="moda">Moda</label>
+            </div>
+            <div>
+              <input type="checkbox" name="interes" id="hogar" value="hogar" />
+              <label for="hogar">Hogar</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="interes"
+                id="jugueteria"
+                value="jugueteria"
+              />
+              <label for="jugueteria">Juguetería</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="interes"
+                id="vida-sana"
+                value="vida-sana"
+              />
+              <label for="vida-sana">Vida Sana</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="foto-usuario" class="label">Foto de usuario</label>
+          <input type="file" name="foto-usuario" id="foto-usuario" />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+
+        </div>
+        <div>
+          <label for="contrasena" class="label">Contraseña</label>
+          <input type="password" id="contrasena" required name="password" />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div>
+          <label for="confirm-contra" class="label">Confirmar contraseña</label>
+          <input type="password" id="confirm-contra" required name="password" />
+          <span class="alerta">* CAMPO REQUERIDO</span>
+        </div>
+        <div class="cont-boton">
+          <button type="submit" class="btn" href="/">Enviar</button>
+          <button type="reset" class="btn">Borrar datos</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
